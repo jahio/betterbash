@@ -9,6 +9,17 @@ on in a given cluster at a given time.
 It works by creating a .prompt file in a given user's $HOME, then modifying $HOME/.bashrc to
 source $HOME/.prompt which assigns the PS1 variable.
 
+### Example prompt:
+
+Shows your instance role, name if assigned, environment name and username@hostname:
+
+```
+app_master \ todo_prod \ deploy@ec2-107-20-247-228.compute-1.amazonaws.com
+[~] $
+```
+
+The format is controlled by tweaking ```cookbooks/prompt/templates/default/prompt.erb```.
+
 ### Status: Development
 
 This hasn't been tested a whole lot and there may still be changes down the line, but it's so far
